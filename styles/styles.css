@@ -438,6 +438,12 @@ i{
         width: 65%;
         min-width: 200px;
     }
+    section{
+        padding: 0;
+    }
+    .container-fluid{
+        padding: 0;
+    }
 
 
 } 
