@@ -70,12 +70,15 @@ nav .main-button{
   
 }
 .description{
+    background-color: #8b48bf;
+}
+.description-main{
     padding: 40px 120px;
     background-color: #3cddf3;
     color: white;
     text-align: left;
 }
-.description h2{
+.description-main h2{
     font-weight: 600;
     font-size: 2em;
     margin: 0;
@@ -93,7 +96,7 @@ nav .main-button{
     background-color: #ddc8ec;
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
-    font-size: 0.8rem;
+    font-size: 1rem;
     margin-bottom: 25px;
 }
 .characteristics h3::before{
@@ -105,37 +108,44 @@ nav .main-button{
     margin-right: 15px;
 }
 .characteristics p{
-   padding-right: 20px;
+   
    line-height: 25px;
    color: #b3b2b7;
 }
 .best{
-    padding: 0px 20px;
+    padding: 0px 40px;
+    margin: 150px 0;
 }
 .best h2{
     margin-bottom: 100px;
     font-size: 2em;
 }
-.best h3{
+.best-card-container h3{
     font-size: 1rem;
 }
-.best p{
+.best-card-container p{
     color: #b9b9c1;
 }
-.best div{
+.best-card-container div{
     background-color: #fafafa;
-    position: relative;
-    padding: 30px 20px;
+    padding: 30px 30px;
 }
-.best img{
+.best-card-container div{
+    position: relative;
+}
+.best-card-container img{
     position: absolute;
     left: 50%;
     top: -35px;
     transform: translate(-50%);
 }
-.best a{
+.best-card-container a{
     display: inline-block;
     margin: 50px 25px;
+}
+
+.best-card-sanyo, .best-card-navarro{
+    display: none;
 }
 .last{
     background-color: #3cddf3;
@@ -254,18 +264,53 @@ footer a{
         max-width: 427px;
         padding: 0;
     }
-    .description{
+    .description-main{
         background-color: #8c48bf;
         display: flex;
         justify-content: space-around;
         align-items: center;
+        max-width: 1212px;
+        margin: 0 auto;
+        
     }
-    .description h2{
+    .description-main div{
         flex: 1;
+        padding: 0 25px;
+        max-width: 470px;
     }
-    .description p{
+    .characteristics{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        background-color: #fafafa;
+        padding: 25px 120px;
+        margin-bottom: 150px;
+    }
+    .characteristics div{
         flex: 1;
+        padding: 0 25px;
     }
+    .characteristics div:nth-last-of-type(1){
+        flex: 0 1 100%;
+        
+    }
+    .characteristics h3{
+        background-color: transparent;
+        
+    }
+    .best-card-container{
+        display: flex;
+        justify-content: space-around;
+        max-width: 1360px;
+        margin: 0 auto;
+
+    }
+    .best-card-navarro, .best-card-sanyo{
+        display: flex;
+        flex-direction: column;
+    }
+  
+   
     
 }
 
@@ -277,5 +322,14 @@ footer a{
     }
     .main-container{
         max-width: 1258px;
+    }
+    .best-card-container{
+        display: flex;
+        
+        max-width: 1860px;
+        
+    }
+    .best-card-container div{
+        max-width: 450px;
     }
 }
